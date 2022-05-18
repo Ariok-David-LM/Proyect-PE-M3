@@ -1,1 +1,20 @@
-
+var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', (event) => {
+  var button = event.relatedTarget
+  var name = button.getAttribute('data-name')
+  var id = button.getAttribute('data-id')
+  var tipo = button.getAttribute('data-tipo')
+  var habilidad = button.getAttribute('data-habi')
+  var atack = button.getAttribute('data-atack')
+  var defense = button.getAttribute('data-defense')
+  var modalTitle = exampleModal.querySelector('.modal-title')
+  var identificador = exampleModal.querySelector('#ide')
+  var tipDe = exampleModal.querySelector('#tipo')
+  var habilidades = exampleModal.querySelector('#habilidades')
+  var ataqueYDefensa = exampleModal.querySelector('#atackANDdef')
+  modalTitle.textContent = name
+  identificador.textContent = "ID: " + id
+  tipDe.textContent = "Tipo: " + tipo
+  habilidades.textContent = "Habilidades: " + habilidad
+  ataqueYDefensa.textContent = "Ataque:" + atack + "    Defensa:" + defense
+})
