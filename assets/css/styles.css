@@ -1,0 +1,29 @@
+body{
+    background-image: linear-gradient(70deg, #FF4040, #FF7676);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo-card{
+    background-image: linear-gradient(to bottom, #40CBD4, white);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.fondo-cardi{
+    background-image: linear-gradient(to bottom, #1AA2AF, white);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.img-round{
+    border-radius: 50%;
+    border: 3px solid #1AA2AF;
+    background-color: white;
+}
+.fondo-nav{
+    background-color: #DA1E2D;
+    border-bottom: 5px solid black;
+}
+.boton{
+    opacity: 1;
+}
