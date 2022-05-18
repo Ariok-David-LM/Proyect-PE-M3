@@ -24,9 +24,6 @@ body{
     background-color: #DA1E2D;
     border-bottom: 5px solid black;
 }
-.boton{
-    opacity: 1;
-}
 .myModal-content{
     position: relative;
     display: flex;
