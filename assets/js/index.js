@@ -34,7 +34,7 @@ const renderPokeCard = (element) => {
     newButton.setAttribute('type', 'button')
     newButton.setAttribute('data-bs-toggle','modal')
     newButton.setAttribute('data-bs-target','#exampleModal')
-    newButton.setAttribute('data-name',element.nombre)
+    newButton.setAttribute('data-name',element.nombre.toUpperCase())
     newButton.setAttribute('data-id',element.identity)
     newButton.setAttribute('data-tipo',element.tipo)
     newButton.setAttribute('data-habi',element.habilidades)
@@ -45,7 +45,7 @@ const renderPokeCard = (element) => {
     newImg.setAttribute('alt',element.nombre)
     newImg.setAttribute('width','40')
     newImg.setAttribute('height','40')
-    newButton.innerHTML = element.nombre
+    newButton.innerHTML = element.nombre.toUpperCase()
     newButton.appendChild(newImg)
     contenedor.appendChild(newButton)
 }
@@ -70,7 +70,7 @@ const normalizePokemon = (data) => {
     renderPokeCard(poke)
 }
 const main = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=500')
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
         .then(response => response.json())
         .then((pokemones) => {
             pokemones.results.forEach(element => {
