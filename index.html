@@ -17,22 +17,27 @@
             <a class="navbar-brand">
                 <img src="./assets/img/logo.png" alt="" width="110" height="40">
             </a>
+
             <form class="d-flex col-md-5 mx-auto">
                 <div class="input-group mb-3">
                     <input class="form-control" type="search" placeholder="Buscar Pokemon" aria-label="Search" id="buscarInput">
+
                     <select class="form-select " id="inputGroupSelect01" style="max-width: 20%;">
                         <option value="0" selected>Todos</option>
-                        <option value="30">0-30</option>
-                        <option value="60">31-60</option>
-                        <option value="90">61-90</option>
-                        <option value="1">91 +</option>
+                        <option value="1">0-30</option>
+                        <option value="2">31-60</option>
+                        <option value="3">61-90</option>
+                        <option value="4">91 +</option>
                     </select>
+
                     <label class="input-group-text" for="inputGroupSelect01">Ataque</label>
                 </div>
             </form>
+
             <a class="navbar-brand fw-bolder text-white">POKEDEX</a>
         </div>
     </nav>
+
     <div class="container-fluid d-flex flex-wrap justify-content-center contenedor" id="contenedor"></div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -42,19 +47,20 @@
                     <h5 class="modal-title" id="exampleModalLabel">Nombre Pokemon</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="card" style="max-width: 600px; border-radius: 15px; border: 2px solid blue;">
                     <div class="row g-0">
                         <div class="col-md-5 fondo-cardi d-flex justify-content-center">
                             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
                                 class="img-fluid img-round" alt="..." id="imagen">
                         </div>
+
                         <div class="col-md-7">
                             <div class="card-body fondo-card">
                                 <p class="card-text" id="ide">ID:.....</p>
                                 <p class="card-text" id="tipo">Tipo:.....</p>
                                 <p class="card-text" id="habilidades">Habilidades:.....</p>
-                                <p class="card-text"><small class="text-muted" id="atackANDdef">Ataque:.....
-                                        Defensa:....</small></p>
+                                <p class="card-text"><small class="text-muted" id="atackANDdef">Ataque:..... Defensa:....</small></p>
                             </div>
                         </div>
                     </div>
@@ -62,9 +68,8 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 
