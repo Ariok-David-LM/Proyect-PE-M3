@@ -8,7 +8,6 @@ exampleModal.addEventListener('show.bs.modal', (event) => {
   var atack = button.getAttribute('data-atack')
   var defense = button.getAttribute('data-defense')
   var imag = button.getAttribute('data-img')
-
   var modalTitle = exampleModal.querySelector('.modal-title')
   var identificador = exampleModal.querySelector('#ide')
   var tipDe = exampleModal.querySelector('#tipo')
@@ -24,6 +23,29 @@ exampleModal.addEventListener('show.bs.modal', (event) => {
 })
 const contenedor = document.querySelector('#contenedor')
 let pokemonesNormalizados = []
+const searchElement = document.querySelector('#buscarInput')
+const searchOption = document.querySelector('#inputGroupSelect01')
+searchElement.addEventListener('keyup', (event) =>{
+    const inputText = event?.target?.value.toLocaleLowerCase() || ''
+    let op = searchOption.value
+    cleanView()
+    const pokeFiltered = searching(inputText, op)
+    console.log(pokeFiltered)
+    pokeFiltered.forEach(element => {
+        renderPokeCard(element)
+    })
+})
+const searching = (text,op) => {
+    const pokeFil = pokemonesNormalizados.filter(poke => {
+        const name = poke.nombre
+        return (name.toLocaleLowerCase()).includes(text)
+    })
+    return pokeFil
+    
+}
+const cleanView = () => {
+    contenedor.innerHTML = ''
+}
 const renderPokeCard = (element) => {
     const newButton = document.createElement('button')
     const newImg = document.createElement('img')
@@ -67,6 +89,7 @@ const normalizePokemon = (data) => {
         ataque: data.stats[1].base_stat,
         defensa: data.stats[3].base_stat
     }
+    pokemonesNormalizados.push(poke)
     renderPokeCard(poke)
 }
 const main = () => {
@@ -78,9 +101,9 @@ const main = () => {
                 .then((response) => response.json())
                 .then((pokemon) => normalizePokemon(pokemon))
             });
-        })
-
-        
+        })   
 }
+
+
 
 main()
